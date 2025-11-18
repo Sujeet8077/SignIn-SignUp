@@ -1,0 +1,111 @@
+/* Basic Reset and Setup */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #333;
+    /* Allows watermark to be positioned absolutely relative to body */
+    position: relative; 
+}
+
+/* Container for the Forms */
+.container {
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    background-color: #ffffff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    transition: all 0.5s ease-in-out;
+    z-index: 10; /* Ensures the form is above the watermark */
+}
+
+/* ... (Existing form, input, and button styles remain the same) ... */
+
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #5b5b5b;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box; 
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #4CAF50; 
+    outline: none;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Switch Link Styling */
+.switch-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.switch-link a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.switch-link a:hover {
+    text-decoration: underline;
+}
+
+/* Utility Class for Hiding Forms */
+.hidden {
+    display: none;
+}
+
+/* 🌟 NEW WATERMARK STYLING 🌟 */
+.watermark {
+    position: absolute; /* Position relative to the body */
+    bottom: 15px;      /* 15px from the bottom */
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    color: #888;       /* Subtle gray color */
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    padding: 5px 0;
+    z-index: 5;
+}
